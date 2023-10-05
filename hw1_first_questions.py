@@ -9,6 +9,11 @@
 def triple(x):
     return 3*x
 
+# Test of the "triple" function
+test_values = [1, 2, 3, 4, 5]
+results_triple = [triple(x) for x in test_values]
+
+results_triple
 
 # 2)
 # Create a function named "subtract" that
@@ -17,6 +22,13 @@ def triple(x):
 #
 def subtract(x,y):
     return y-x
+
+# Test of the "subtract" function
+test_values_x = [10, 20, 30, 40, 50]
+test_values_y = [5, 10, 15, 20, 25]
+results_subtract = [subtract(y, x) for y, x in zip(test_values_x, test_values_y)]
+
+results_subtract
 
 
 # 3)
@@ -39,4 +51,10 @@ def dictionary_maker(tuples_list):
         result_dict[key] = value
 
     return result_dict
+
+# Test of the "dictionary_maker" function
+test_tuples = [('foo', 1), ('bar', 3)]
+result_dictionary_maker = dictionary_maker(test_tuples)
+
+result_dictionary_maker
 
