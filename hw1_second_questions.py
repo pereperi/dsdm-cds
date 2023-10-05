@@ -15,6 +15,19 @@ def has_experience_as(cv_list, job_title):
             result_users.append(cv['user'])
     return result_users
 
+# Test of the "has_experience_as" function
+test_cvs = [
+    {'user': 'john', 'jobs': ['analyst', 'engineer']},
+    {'user': 'jane', 'jobs': ['finance', 'software']},
+    {'user': 'doe', 'jobs': ['analyst', 'manager']}
+]
+job_title_test = 'analyst'
+results_has_experience_as = has_experience_as(test_cvs, job_title_test)
+
+results_has_experience_as
+
+
+
 #
 # 5)
 # Create a function called "job_counts"
@@ -34,6 +47,11 @@ def job_counts(cv_list):
                 final_dict[job] = 1
     return final_dict
 
+
+# Test of the "job_counts" function 
+results_job_counts = job_counts(test_cvs)
+
+results_job_counts
 
 #
 # 6)
@@ -61,3 +79,7 @@ def most_popular_job(cv_list):
             curr_max = job[1]
     return first_tup
 
+# Test of the "most_popular_job" function 
+results_most_popular_job = most_popular_job(test_cvs)
+
+results_most_popular_job
